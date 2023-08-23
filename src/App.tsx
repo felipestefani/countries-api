@@ -10,8 +10,8 @@ function App() {
 
   return (
     <MainProvider>
-      <BrowserRouter>
-      <MainTemplate>
+      <BrowserRouter basename="/countries-api">
+        <MainTemplate>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/country_name" element={<CountryDetails />} />
