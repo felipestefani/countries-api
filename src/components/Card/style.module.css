@@ -4,6 +4,7 @@
     max-width: 360px;
     margin-bottom: 2em;
     background-color: var(--white);
+    border-radius: 10px;
 }
 
 .country_container {
@@ -14,6 +15,7 @@
     width: 100%;
     height: 12em;
     object-fit: cover;
+    border-radius: 10px 10px 0 0;
 }
 
 .country_info_container {

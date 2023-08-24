@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import style from "./style.module.css";
 import { Link } from "react-router-dom";
+import { MainContext } from "../../contexts/MainContext";
 
 interface CardProps {
     name: string,
@@ -11,10 +13,14 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = props => {
 
+    const contextData = useContext(MainContext)
+    if(!contextData) return null
+    const { isDarkMode } = contextData
+
     const { name, population, region, capital, flag } = props
 
     return(
-        <div className={style.card_container}>
+        <div className={`${style.card_container} ${isDarkMode ? 'card_dark_mode' : ''}`}>
             <div className={style.country_container}>
                 <Link to={`/${name}/details`}><img src={flag} alt="country flag" className={style.home_flag}/></Link>
             </div>
@@ -34,8 +40,7 @@ const Card: React.FC<CardProps> = props => {
                         <p className={style.capital_text}>{capital}</p>
                     </div>
                 </div>
-            </div>
-            
+            </div> 
         </div>
     )
 }
