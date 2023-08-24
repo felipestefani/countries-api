@@ -1,11 +1,28 @@
-import { Link } from "react-router-dom";
+import style from "./style.module.css";
+import Card from "../../components/Card";
+import country_data from "../../data/data.json";
+
 const Home = () => {
-    console.log('estou na home');
-    
+
     return(
-        <div>
-            This is home page
-            <Link to={'/country_name'}> Country </Link>
+        <div className={style.home_container}>
+            <ul className={style.country_list}>
+            {
+                country_data.map( country => (
+                    <li key={country.cioc} >
+                        <Card 
+                        name={country.name} 
+                        population={country.population} 
+                        region={country.region} 
+                        capital={country.capital}
+                        flag={country.flag}
+                    />
+                    </li>
+
+                ))    
+            }
+            </ul>
+
         </div>
     )
 }

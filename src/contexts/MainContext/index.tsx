@@ -1,6 +1,12 @@
 import { createContext, useState, ReactNode } from "react";
 
-export const MainContext = createContext({})
+interface MainContextType {
+    isDarkMode: boolean;
+    setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const MainContext = createContext<MainContextType | undefined>(undefined)
+// export const MainContext = createContext({})
 
 interface MainProviderProps {
     children: ReactNode
@@ -8,10 +14,10 @@ interface MainProviderProps {
 
 const MainProvider = ({children}: MainProviderProps) => {
 
-    const [country, setCountry] = useState('')
+    const [isDarkMode, setIsDarkMode] = useState(false)
 
     return(
-        <MainContext.Provider value={{ country, setCountry }}>
+        <MainContext.Provider value={{ isDarkMode, setIsDarkMode }}>
             {children}
         </MainContext.Provider>
     )

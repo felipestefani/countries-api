@@ -15,6 +15,17 @@
   box-sizing: border-box;
   font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
 }
+
 .app_container {
   width: 100%;
+  position: relative;
+}
+
+footer {
+  color: var(--very-dark-blue);
+}
+
+.dark_mode {
+  background-color: var(--very-dark-blue);
+  color: var(--white);
 }

@@ -14,7 +14,7 @@ function App() {
         <MainTemplate>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/country_name" element={<CountryDetails />} />
+            <Route path="/:country_name/details" element={<CountryDetails />} />
           </Routes>
         </MainTemplate>
       </BrowserRouter>

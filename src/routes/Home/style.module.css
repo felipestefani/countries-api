@@ -1,0 +1,13 @@
+
+.home_container {
+    width: 100%;
+}
+
+.country_list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 2em 5em;
+}
