@@ -15,14 +15,14 @@ const Card: React.FC<CardProps> = props => {
 
     const contextData = useContext(MainContext)
     if(!contextData) return null
-    const { isDarkMode } = contextData
+    const { isDarkMode, setSearchValue } = contextData
 
     const { name, population, region, capital, flag } = props
 
     return(
         <div className={`${style.card_container} ${isDarkMode ? 'card_dark_mode' : ''}`}>
             <div className={style.country_container}>
-                <Link to={`/${name}/details`}><img src={flag} alt="country flag" className={style.home_flag}/></Link>
+                <Link to={`/${name}/details`} onClick={() => setSearchValue('')}><img src={flag} alt="country flag" className={style.home_flag}/></Link>
             </div>
             <div className={style.country_info_container}>
                 <h1 className={style.country_name}>{name}</h1>

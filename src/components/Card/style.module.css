@@ -1,10 +1,11 @@
 
 .card_container {
     width: 100%;
-    max-width: 360px;
+    max-width: 280px;
     margin-bottom: 2em;
     background-color: var(--white);
     border-radius: 10px;
+    box-shadow: 0 0 10px var(--box-shadow);
 }
 
 .country_container {
