@@ -2,7 +2,7 @@ import style from "./style.module.css";
 import Card from "../../components/Card";
 import Filter from "../../components/Filter";
 import SearchInput from "../../components/SerachInput";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { MainContext } from "../../contexts/MainContext";
 
 const Home = () => {

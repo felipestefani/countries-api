@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import style from "./style.module.css";
 import { FiSearch } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
