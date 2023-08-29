@@ -13,9 +13,7 @@ const CountryDetails = () => {
     const { country_name } = useParams()
 
     const displayCountry = allCountries.filter( country => country.name == country_name)
-    console.log(displayCountry);
     
-
     return(
         <div className={style.country_details_container}>
             <Link to={'/'} className={style.back_home}> <GoArrowLeft className={style.back_icon} size={'1.5em'}/>Voltar</Link>

@@ -1,7 +1,7 @@
 
 .card_container {
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
     margin-bottom: 2em;
     background-color: var(--white);
     border-radius: 10px;
@@ -13,9 +13,9 @@
 }
 
 .home_flag {
-    width: 100%;
+    width: 300px;
     height: 12em;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 10px 10px 0 0;
 }
 
