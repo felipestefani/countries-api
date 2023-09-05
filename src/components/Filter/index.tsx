@@ -6,17 +6,15 @@ import { MainContext } from "../../contexts/MainContext";
 const Filter = () => {
 
     // const [regions, setRegions] = useState([])
-
     const contextData = useContext(MainContext)
     if(!contextData) return null
-    const { setDisplayCountries, allCountries, filterValue, setFilterValue } = contextData
+    const { isDarkMode, setDisplayCountries, allCountries, filterValue, setFilterValue } = contextData
 
     const filter = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setFilterValue(e.target.value)
     }
 
     const regions = [... new Set(allCountries.map( country => country.region))]
-    console.log(regions);
     
     useEffect( () => {
         let newDisplay = allCountries.filter( countries => countries.region.toUpperCase() == filterValue.toUpperCase())
@@ -25,7 +23,7 @@ const Filter = () => {
     }, [filterValue])
 
     return(
-        <div className={style.filter_container}>
+        <div className={`${style.filter_container} ${isDarkMode ? 'card_dark_mode' : ''}`}>
             <select name="" id="" className={style.filter_select} onChange={ e => filter(e)}>
                 <option value=''>Filter by Region</option>
                 {

@@ -37,7 +37,7 @@ const Card: React.FC<CardProps> = props => {
                     </div>
                     <div className={style.capital_info}>
                         <h2 className={style.capital_title}>Capital:</h2>
-                        <p className={style.capital_text}>{capital}</p>
+                        <p className={style.capital_text}>{capital ? capital : '-'}</p>
                     </div>
                 </div>
             </div> 

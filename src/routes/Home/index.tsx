@@ -9,7 +9,7 @@ const Home = () => {
 
     const contextData = useContext(MainContext)
     if(!contextData) return null
-    const { displayCountries } = contextData
+    const { displayCountries, isDarkMode } = contextData
 
     return(
         <div className={style.home_container}>
@@ -18,10 +18,10 @@ const Home = () => {
                 <Filter />
             </div>
             
-            <ul className={style.country_list}>
+            <ul className={`${style.country_list}`}>
             {
                 displayCountries.map( country => (
-                    <li key={country.name} >
+                    <li key={country.name} className={`${style.list_item} ${isDarkMode ? 'card_dark_mode' : ''}`}>
                         <Card 
                         name={country.name} 
                         population={country.population} 

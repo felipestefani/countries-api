@@ -1,6 +1,6 @@
 
 .search_input_container {
-    width: 35%;
+    width: 32em;
     background-color: var(--white);
     padding: 0.8em 2em;
     box-shadow: 0px 0px 10px var(--box-shadow);
@@ -12,6 +12,10 @@
     align-items: center;
 }
 
+.search_icon {
+    color: gray;
+}
+
 .search_input {
     width: 100%;
     border: none;
@@ -19,4 +23,18 @@
     font-size: 18px;
     border-radius: 5px;
     outline: none;
+}
+
+
+
+@media (max-width: 880px) {
+    .search_input_container {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+}
+
+/*------------------------- dark mode -------------------*/
+.search_icon_dark_mode {
+    color: var(--white)
 }

@@ -40,3 +40,9 @@
 .dark_mode {
     background-color: var(--dark-blue);
 }
+
+@media (max-width:780px) {
+    .header_container {
+        padding: 2em 1em;
+    }
+}

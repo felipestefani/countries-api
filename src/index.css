@@ -26,11 +26,21 @@ footer {
   color: var(--very-dark-blue);
 }
 
-.dark_mode {
+.dark_mode, .dark_mode_shadow {
   background-color: var(--very-dark-blue);
   color: var(--white);
 }
 
 .card_dark_mode {
   background-color: var(--dark-blue);
+  border-radius: 10px;
+  color: var(--white);
+}
+
+.card_dark_mode::placeholder {
+  color: var(--white);
+}
+
+.dark_mode_shadow {
+  box-shadow: 0 0 4px var(--dark-gray);
 }

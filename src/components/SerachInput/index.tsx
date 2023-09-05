@@ -8,7 +8,7 @@ const SearchInput = () => {
 
     const contextData = useContext(MainContext)
     if(!contextData) return null
-    const { searchValue, setSearchValue, setDisplayCountries, allCountries } = contextData
+    const { isDarkMode, searchValue, setSearchValue, setDisplayCountries, allCountries } = contextData
 
     // const filterCountry = (e: React.FormEvent<HTMLFormElement>) => {
     //     e.preventDefault()
@@ -28,13 +28,13 @@ const SearchInput = () => {
     }, [searchValue]);
 
     return(
-        <div className={style.search_input_container}>
+        <div className={`${style.search_input_container} ${isDarkMode ? 'card_dark_mode' : ''}`} >
             <form className={style.search_form}>
             {/* <form onSubmit={filterCountry} className={style.search_form}> */}
                 <div className={style.search_icon_container}>
-                    <FiSearch className={style.search_icon} size={'1.5em'} />
+                    <FiSearch className={`${isDarkMode ? style.search_icon_dark_mode : style.search_icon}`} size={'1.5em'}/>
                 </div>
-                <input type="text" className={style.search_input} value={searchValue} placeholder='Search for a country...' onChange={e => setSearchValue(e.target.value)}/>
+                <input type="text" className={`${style.search_input} ${isDarkMode ? 'card_dark_mode' : ''}`} value={searchValue} placeholder='Search for a country...' onChange={e => setSearchValue(e.target.value)}/>
                 {/* <input type="text" className={style.search_input} value={searchValue} placeholder='Search for a country...' onChange={ e => setSearchValue(e.target.value) }/> */}
                 <div hidden={searchValue.length > 0 ? false : true}>
                     <IoMdClose size={'1.5em'} onClick={() => setSearchValue('')}/>
