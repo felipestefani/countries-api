@@ -1,7 +1,7 @@
 import style from "./style.module.css";
 import { Link, useParams } from "react-router-dom";
 import { GoArrowLeft } from "react-icons/go";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { MainContext } from "../../contexts/MainContext";
 
 const CountryDetails = () => {

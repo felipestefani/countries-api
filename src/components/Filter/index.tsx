@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import style from "./style.module.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MainContext } from "../../contexts/MainContext";
