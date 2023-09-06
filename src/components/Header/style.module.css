@@ -41,8 +41,29 @@
     background-color: var(--dark-blue);
 }
 
-@media (max-width:780px) {
+@media (max-width:780px) and (min-width: 426px) {
     .header_container {
         padding: 2em 1em;
     }
+}
+
+@media (max-width: 425px) {
+    .header_container {
+        padding: 2em 1em;
+    }
+
+    .logo {
+        font-weight: 800;
+        font-size: 16px;
+    }
+
+    .moon_icon {
+        margin-right: 0.4em;
+    }
+    
+    .dark_mode_text {
+        text-transform: capitalize;
+        font-size: 14px;
+    }
+
 }

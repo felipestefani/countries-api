@@ -43,4 +43,5 @@ footer {
 
 .dark_mode_shadow {
   box-shadow: 0 0 4px var(--dark-gray);
+  background-color: var(--dark-blue);
 }

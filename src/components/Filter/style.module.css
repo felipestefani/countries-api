@@ -21,8 +21,17 @@
     background-color: var(--white);   
 }
 
-.option {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+.filter_select_dark_mode {
+    background-color: var(--dark-blue);   
+    color: var(--white);
+}
+
+.custom_select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.custom_options {
+    display: none
 }

@@ -15,19 +15,26 @@ const CountryDetails = () => {
     const displayCountryArray = allCountries.filter( country => country.name == country_name)
     const displayCountry = displayCountryArray[0]
 
+    // const borderCountries = () => {
+    //     if (displayCountry.borders) {
+    //         const listAllCountries = displayCountry.borders.map( (country: string) => allCountries.filter( (coun: string) => coun.alpha3Code == country ) ) 
+    //         const countriesName = listAllCountries.map( (country: string) => country[0].name)
+    //         return countriesName
+    //     }
+    // }
+
     const borderCountries = () => {
         if (displayCountry.borders) {
-            const listAllCountries = displayCountry.borders.map( (country: string) => allCountries.filter( (coun: string) => coun.alpha3Code == country ) ) 
-            const countriesName = listAllCountries.map( (country: string) => country[0].name)
-            return countriesName
+            const countriesName = displayCountry.borders.map((countryCode: string) => {
+                const country = allCountries.find((coun: { alpha3Code: string }) => coun.alpha3Code === countryCode);
+                return country ? country.name : ''; // Return an empty string if not found
+            });
+            return countriesName;
         }
+        // return []; // Return an empty array if there are no borders
     }
 
     const border = borderCountries()
-
-    useEffect(() => {
-        borderCountries()
-    },[])
     
     return(
         <div className={style.country_details_container}>
